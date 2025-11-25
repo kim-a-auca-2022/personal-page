@@ -29,9 +29,9 @@ body {
     "four four eight nine";
   grid-template-columns:
     minmax(155px, auto)
-    minmax(475px, auto)
+    minmax(477px, auto)
     minmax(565px, auto)
-    minmax(340px, auto);
+    minmax(338px, auto);
 }
 
 .box1 {
