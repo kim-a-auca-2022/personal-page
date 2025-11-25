@@ -59,8 +59,8 @@ body {
   display: flex;
   flex-direction: row;
   list-style: none;
-  min-width: 455px;
-  min-height: 18px;
+  flex-basis: 459px;
+  height: 18px;
   gap: 31px;
   font-family: "Arial", sans-serif;
   font-weight: 700;
