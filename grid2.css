@@ -59,9 +59,9 @@ body {
   display: flex;
   flex-direction: row;
   list-style: none;
-  max-width: 455px;
+  min-width: 455px;
   min-height: 18px;
-  gap: 30.5px;
+  gap: 31px;
   font-family: "Arial", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
