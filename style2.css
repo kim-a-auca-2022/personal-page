@@ -80,7 +80,7 @@ img {
 }
 
 .buttonMenu {
- display: none;
+  display: none;
 }
 .buttonMenu img {
   width: 30px;
@@ -128,20 +128,24 @@ img {
 }
 
 @media (max-width: 500px) {
+  .box6 {
+    display: none;
+  }
   .buttonMenu {
     display: block;
     position: fixed; /* "fixed" elements will always stay in same place even when user scrolls */
     top: 10px; /* fix the element 0px from top of browser window */
-    right: 0; /* fix the element 0px from right of browser window */
-  }
-  .box6 {
-    display: none;
+    right: 10px; /* fix the element 0px from right of browser window */
+    z-index: 1000;
   }
   .box6.mobileMenu {
     display: block;
     position: fixed; /* "fixed" elements will always stay in same place even when user scrolls */
     top: 50px; /* fix the element 0px from top of browser window */
     right: 0; /* fix the element 0px from right of browser window */
+    width: 100%;
+    background: white;
+    z-index: 999;
   }
   .container {
     display: grid;
@@ -155,7 +159,5 @@ img {
       "box3"
       "box8"
       "box9";
-    grid-gap: 10px;
-    padding: 5px;
   }
 }

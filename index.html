@@ -4,9 +4,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Assignment 9</title>
-    <link rel="stylesheet" href="style2.css" class="style" />
+    <link rel="stylesheet" href="style.css" class="style" />
   </head>
   <body>
+    <button onclick="toggleTheme()" style="position: fixed; top: 0">
+      Switch Style
+    </button>
     <button class="buttonMenu">
       <img src="https://cdn.imgchest.com/files/f302c1088e51.png" alt="Menu" />
     </button>
@@ -333,6 +336,14 @@
       </div>
     </div>
     <script>
+      function toggleTheme() {
+        var theme = document.getElementsByTagName("link")[0];
+        if (theme.getAttribute("href") == "style.css") {
+          theme.href = "style2.css";
+        } else {
+          theme.href = "style.css";
+        }
+      }
       const buttonMenu = document.querySelector(".buttonMenu");
       const boxSix = document.querySelector(".box6");
       buttonMenu.addEventListener("click", () => {
