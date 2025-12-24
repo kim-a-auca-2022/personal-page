@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Times New Roman", Times, serif;
+  background-color: #692d2d;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
+}
+.box5 {
+  grid-area: box5;
+}
+.box6 {
+  grid-area: box6;
+}
+.box7 {
+  grid-area: box7;
+}
+.box8 {
+  grid-area: box8;
+}
+.box9 {
+  grid-area: box9;
+}
+.container {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  grid-template-rows: auto;
+  grid-gap: 10px;
+  grid-template-areas:
+    "box6 box6"
+    "box2 box1"
+    "box5 box7"
+    "box5 box3"
+    "box4 box4"
+    "box8 box8"
+    "box9 box9";
+  padding: 10px;
+}
+
+.container > div {
+  background: white;
+  padding: 10px;
+  border-radius: 5px;
+}
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.menu li {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.menu .search-icon img {
+  width: 20px;
+  height: 20px;
+}
+
+.buttonMenu {
+ display: none;
+}
+.buttonMenu img {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.second-row-videos,
+.third-row-videos,
+.popular-videos {
+  flex-direction: column;
+}
+
+.video-card {
+  flex: 1 1 100%;
+}
+
+.second-row-videos,
+.third-row-videos,
+.popular-videos {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.video-card {
+  padding: 5px;
+}
+
+.social-icons img {
+  width: 50px;
+  height: 50px;
+}
+
+.auth {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 500px) {
+  .buttonMenu {
+    display: block;
+    position: fixed; /* "fixed" elements will always stay in same place even when user scrolls */
+    top: 10px; /* fix the element 0px from top of browser window */
+    right: 0; /* fix the element 0px from right of browser window */
+  }
+  .box6 {
+    display: none;
+  }
+  .box6.mobileMenu {
+    display: block;
+    position: fixed; /* "fixed" elements will always stay in same place even when user scrolls */
+    top: 50px; /* fix the element 0px from top of browser window */
+    right: 0; /* fix the element 0px from right of browser window */
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box7"
+      "box5"
+      "box4"
+      "box3"
+      "box8"
+      "box9";
+    grid-gap: 10px;
+    padding: 5px;
+  }
+}
